@@ -1,3 +1,8 @@
+# About Project
+This is a simple website for my father's laser cutting service for model airplanes.
+
+Live at `bcmlaser.com`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
