@@ -1,0 +1,90 @@
+/* picture height is 860 px */
+
+#showcase {
+    position: relative;
+    display: flex;
+    height: 430px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#showcase button {
+    background-color: none;
+    background: none;
+    border: none;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    z-index: 40;
+}
+
+#showcase button > * {
+    font-size: 64px;
+}
+
+.sliding-right {
+    animation-name: slide-in-right;
+    animation-duration: 1s;
+}
+
+.sliding-left {
+    animation-name: slide-in-left;
+    animation-duration: 1s;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.showcase-image {
+    position: absolute;
+    max-height: 430px;
+    height: 430px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#showcase img:not(.hidden) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#showcase img.hidden {
+    transform: unset;
+}
+
+.showcase-image.sliding-left {
+    z-index: 10;
+}
+
+@keyframes slide-in-right {
+    from { 
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
